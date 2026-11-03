@@ -6,7 +6,7 @@ def decode_word(token):
     form = token.form
     lemma = token.lemma
     root = token.form if form[-1] in 'aeiouAEIOU' else lemma
-    replacements = load_replacements("animacy/replacements_v2.tsv")
+    replacements = load_replacements("../data/supporting-docs/replacements.tsv")
     new_form = get_gn_word(form.lower(), replacements)
     if not new_form:
         num = token.feats.get("Number")
