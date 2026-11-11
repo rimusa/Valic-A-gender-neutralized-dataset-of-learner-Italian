@@ -23,4 +23,4 @@ TODO
 If you use the Valicə dataset, please cite the paper describing it.
 The standard citation can be found below.
 
-> Céline Leuzinger, Caroline Grand-Clement, Ricardo Muñoz Sánchez, and Tom Södahl Bladsjö. 2026. Valic\textipa{@}: A gender-neutralized dataset of learner Italian. In Proceedings of the 7th Workshop on Gender Bias in Natural Language Processing (GeBNLP), Hengqin, China. Association for Computational Linguistics.
+> Céline Leuzinger, Caroline Grand-Clement, Ricardo Muñoz Sánchez, and Tom Södahl Bladsjö. 2026. Valicə: A gender-neutralized dataset of learner Italian. In Proceedings of the 7th Workshop on Gender Bias in Natural Language Processing (GeBNLP), pages 7-20 Hengqin, China (remote). Association for Computational Linguistics.
