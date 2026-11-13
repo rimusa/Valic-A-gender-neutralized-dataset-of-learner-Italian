@@ -2,8 +2,6 @@ from utils.data import get_sentence_text, filter_errors
 from SentenceConversion import SentenceConversion
 from copy import deepcopy
 from tqdm import tqdm
-from itertools import combinations
-import pickle
 
 def get_gn_word(orig_word, words):
     for word, gn_word in words:
@@ -40,9 +38,5 @@ def get_animate_samples(conll, animate_file, use_v1, hack_v2, filter):
                     except ValueError:
                         continue
                     changes.append((int(tok.id), convert, convert, not is_masc))
-            #changes_list = []
-            #for r in range(1, len(changes) + 1):
-            #    changes_list.extend(combinations(changes, r))
-            #for change in changes_list:
             samples.append(SentenceConversion(deepcopy(sent), changes, use_v1, hack_v2))
     return samples

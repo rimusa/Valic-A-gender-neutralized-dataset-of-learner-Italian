@@ -13,7 +13,6 @@ def get_args():
     parser.add_argument('--in_files', required=True, nargs='+', help='Input conllu file')
     parser.add_argument('--out_file', required=True, help='Output conllu file')
     parser.add_argument('--psi', required=True, help='Path to psi parameters')
-    # parser.add_argument('--reinflect', required=True, help='Path to reinflection model')
     parser.add_argument('--animate_list', required=True, help='Path to animate noun list')
     parser.add_argument('--inc_input', default=False, action='store_true', help='True if input should be copied into output file')
     parser.add_argument('--use_v1', default=False, action='store_true')
@@ -34,8 +33,6 @@ def main():
     model = Model([0, 1, 2])
     psi = torch.load(opt.psi)
     print(psi.shape)
-    # with torch.no_grad():
-    #     reinflection_model, device, decode_fn, decode_trg = get_decoding_model(opt.reinflect)
     print("Models loaded")
 
     out = open(opt.out_file, "w", encoding="utf-8")
@@ -48,7 +45,6 @@ def main():
         print("Processing file " + str(i + 1) + " out of " + str(len(opt.in_files)) + " files")
         part = 1
         with open(file, "r", encoding="utf-8") as f:
-            # line = f.readline()
             # Work in batches of 100,000 sentences to avoid memory issues
             not_empty = True
             while not_empty:
